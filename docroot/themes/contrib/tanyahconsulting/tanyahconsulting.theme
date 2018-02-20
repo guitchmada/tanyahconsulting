@@ -1,0 +1,52 @@
+<?php
+
+/**
+ * @file
+ * Bootstrap sub-theme.
+ *
+ * Place your custom PHP code in this file.
+ */
+ 
+function tanyahconsulting_preprocess_html(array &$types) {
+  
+}
+
+ /**
+ * Implements hook_theme_suggestions_alter
+ */
+
+function tanyahconsulting_theme_suggestions_alter(array &$suggestions, array $variables)
+{
+
+	//Permet d'appeler un twig spécial pour le form du projet	
+    if (isset($variables['element']) && isset($variables['element']['#type']) 
+    		&& $variables['element']['#type'] == 'form') {
+        $original_theme_hook = $variables['theme_hook_original']; //On aura 'form'
+        if ($variables['element']['#id'] == 'node-projet-edit-form') {
+        	//Il faut mettre des underscore, sinon ca ne fonctionne pas
+        	$suggestions[] = $original_theme_hook . '__' . str_replace('-', '_', $variables['element']['#id']);
+   			//Mais le twig doit s'appeler form--node-projet-edit-form.html.twig
+   			
+   		}
+    }
+
+    return $suggestions;
+ 
+}
+
+function tanyahconsulting_preprocess_node__projet(&$variables, $hook) {
+	//En consultation d'un projet dans le mode display default
+	//permet de rajouter des variables qui seront utilisées dans le twig
+	$nid = $variables['node']->id();
+	
+    $variables['test_default'] = 'test default sur le nid projet : '.$nid;
+}
+
+
+function tanyahconsulting_preprocess_node__projet__full(&$variables, $hook) {
+	//En consultation d'un projet dans le mode display full
+	//permet de rajouter des variables qui seront utilisées dans le twig
+	$nid = $variables['node']->id();
+	
+    $variables['test'] = 'test sur le nid projet : '.$nid;
+}

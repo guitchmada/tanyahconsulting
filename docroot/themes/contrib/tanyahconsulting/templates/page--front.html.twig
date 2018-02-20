@@ -1,0 +1,135 @@
+<header class="container header-logo" id="navbar1" role="bannertop">
+       {{ page.navigation }} 
+</header>
+
+
+
+
+	<div class="bgimg-1">
+	  <div class="caption">
+	    <span class="border">DEVELOPPEMENT DRUPAL 8</span>
+	  </div>
+	</div>
+	
+	<div class="container-text">
+	  <h3 style="text-align:center;">La plateforme Drupal 8</h3>
+	  <p>Drupal est un DCMS (Système de Gestion de Contenu Dynamique ou Dynamic Content Management System). 
+	  Il est devenu l’une des plateformes « open source » parmi les plus populaires du marché. 
+	  Il est utilisé sur des sites prestigieux comme par exemple : La Maison Blanche <a href="http://www.whitehouse.gov" target="_blank">[http://www.whitehouse.gov]</a>, Amnesty International <a href="http://www.amnesty.org" target="_blank">[http://www.amnesty.org]</a>). 
+	  La communauté très active de Drupal fournit toute une panoplie de modules répondant déjà aux fonctionnalités les plus fréquemment utilisés par des sites internet.
+	  Mais il est également possible de programmer des modules custom (sur mesure), réalisés à la demande.
+	  Drupal est distribué actuellement en version 8 que nous utilisons sur tout nouveau projet.
+	</p>
+	</div>
+	
+	<div class="bgimg-2">
+	  <div class="caption">
+	    <span class="border">VOTRE PROJET</span>
+	  </div>
+	</div>
+	<div style="position:relative;">
+		<div class="container-text-fond-noir">
+		<h3 style="text-align:center; color:#fff">Votre intranet ou site web en Drupal 8</h3>
+	  
+	    <p>Nous maitrisons l'installation d'un nouveau site en Drupal 8, la configuration des modules.
+	    Nous avons une vrai valeur ajoutée sur la création de modules custom dont nous nous assurerons que leur intégration dans votre nouveau site corresponde bien aux exigences demandées. 
+	    Vous avez un projet Drupal 8, envoyez nous un mail avec vos coordonnées, description de votre projet et/ou cahier des charges
+	    et nous conviendrons d'un rendez-vous téléphonique, skype ou hangout pour en parler plus concrètement.</p>
+	  </div>
+	</div>
+	
+	<div class="bgimg-3">
+	  <div class="caption">
+	    <span class="border">HEBERGEMENT WEB</span>
+	  </div>
+	</div>
+	
+	<div style="position:relative;">
+	 
+	  <div class="container-text-fond-noir">
+	  <h3 style="text-align:center; color:#fff">Héberger votre site en Europe</h3>
+	 	<p>Nous proposons également pour les sociétés à Madagascar des hébergements internet soit en mutualisé, soit en serveur dédié linux.
+	    Les serveurs sont situés en Allemagne. Nous revendons également les noms de domaine en .MG</p>
+	  </div>
+	</div>
+	
+	
+	
+	<div class="row">
+		<div class="col-md-5 col-sm-12 block-contacter">
+			<div class="col-md-12 col-sm-12">
+				<div class="nous-contacter">Nous contacter</div>
+			</div>
+			<div class="col-md-12 col-sm-12">
+				<h3>FRANCE</h3>
+				<ul>
+				<li class="item-contact"><i class="fas fa-location-arrow"></i>Présence sur Région Hauts de France plusieurs fois par an</li>
+				</ul>
+				<!--<ul>
+				<li class="item-contact"><i class="fas fa-location-arrow"></i>9 rue du docteur André Sapelier 59240 Dunkerque</li>
+				<li class="item-contact"><i class="fas fa-envelope"></i><a class='mail' href='mailto:tanyahconsulting@gmail.com'>tanyahconsulting@gmail.com</a></li>
+				</ul>-->
+			</div>
+			<div class="col-md-12 col-sm-12">
+				<h3>MADAGASCAR</h3>
+				<li class="item-contact"><i class="fas fa-location-arrow"></i>Lot VB 75 G Ambatoroka 101 Antananarivo</li>
+				<li class="item-contact"><i class="fas fa-envelope"></i><a class='mail' href='mailto:tanyahconsulting@gmail.com'>tanyahconsulting@gmail.com</a></li>
+				</ul>
+			</div>
+		</div>
+	
+		<div class="col-md-7 col-sm-12 plan">
+			<div id="map"></div>
+			    <script>
+			      function initMap() {
+			        var bureaumada = {lat: -18.924040, lng: 47.549136};
+			        var map = new google.maps.Map(document.getElementById('map'), {
+			          zoom: 13,
+			          center: bureaumada
+			        });
+			        
+			         var contentString = "<div id='content'>"+
+					      "<div id='siteNotice'>"+
+					      "</div>"+
+					      "<h1 id='firstHeading' class='firstHeading'>Tanyah Consulting</h1>"+
+					      "<div id='bodyContent'>"+
+					      "<p><b>Tanyah Consulting</b> est situé dans le quartier d'Ambatoroka au sud-ouest "+
+					      "de la ville d'Antananarivo</p>"+
+					      "</div>"+
+					      "</div>";
+					      
+			        var infowindow = new google.maps.InfoWindow({
+					    content: contentString
+					  });
+					  
+			        var marker = new google.maps.Marker({
+			          position: bureaumada,
+			          map: map,
+			          title: 'Tanyah Consulting'
+			        });
+			        
+			        marker.addListener('click', function() {
+					    infowindow.open(map, marker);
+					});
+					  
+			      }
+			    </script>
+			    <script async defer
+			    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtVd6vW7sVj8KwjrZTlL3fKXU9wcTwVAE&callback=initMap">
+			    </script>
+		</div>
+	</div>
+	
+	<div class="footer container-text-fond-noir">
+		<div class="row">
+			<div class="col-md-4 col-sm-12 block-copyright">Copyright © 2018</div>
+			<div class="col-md-4 col-sm-12 block-mail"><a href="/contact">Nous contacter</a></div>
+			<div class="col-md-4 col-sm-12 cachecache">Madagascar
+			Hébergement site web Madagascar
+			Web hosting Madagascar
+			Création site internet Madagascar
+			Création site web Madagascar</div>
+			</div>
+		</div>
+	</div>
+	

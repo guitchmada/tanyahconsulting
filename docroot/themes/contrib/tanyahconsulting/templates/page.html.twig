@@ -1,0 +1,37 @@
+<header class="container header-logo" id="navbar1" role="bannertop">
+       {{ page.navigation }} 
+</header>
+
+
+{# Content #}
+<section{{ content_attributes.addClass(content_classes) }}>
+
+
+{# Content #}
+	{% block content %}
+	
+	
+		<div class="bgimg-4">
+		  <div class="caption">
+		    <span class="border">{{ node.title.value|upper }}</span>
+		  </div>
+		</div>
+	
+	<div class="container-text">
+		{{ page.content }}
+	</div>
+	{% endblock %}
+</section>
+
+	<div class="footer container-text-fond-noir">
+		<div class="row">
+			<div class="col-md-4 col-sm-12 block-copyright">Copyright © 2018</div>
+			<div class="col-md-4 col-sm-12 block-mail"><a href="/contact">Nous contacter</a></div>
+			<div class="col-md-4 col-sm-12 cachecache">Madagascar
+			Hébergement site web Madagascar
+			Web hosting Madagascar
+			Création site internet Madagascar
+			Création site web Madagascar</div>
+			</div>
+		</div>
+	</div>

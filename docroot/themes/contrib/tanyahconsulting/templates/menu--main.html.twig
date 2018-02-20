@@ -1,0 +1,46 @@
+<nav class="navbar navbar-toggleable-md navbar-light">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="#">&nbsp;</a>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+     
+      
+      
+      {%
+        set item_classes = [
+          item.is_expanded and item.below ? 'expanded',
+          item.is_expanded and menu_level == 0 and item.below ? 'dropdown',
+          item.in_active_trail ? 'active',
+          'nav-item'
+        ]
+      %}
+      
+      {% for item in items %}
+     
+      
+	      {% if menu_level == 0 and item.is_expanded and item.below %}
+	        <li{{ item.attributes.addClass(item_classes) }}>
+	        <a href="{{ item.url }}" class="dropdown-toggle" data-toggle="dropdown">{{ item.title }} <span class="caret"></span></a>
+	      {% else %}
+	        <li{{ item.attributes.addClass(item_classes) }}>
+	        {{ link(item.title, item.url) }}
+	        
+	      {% endif %}
+	      {% if item.below %}
+	        {{ _self.menu_links(item.below, attributes.removeClass(classes), menu_level + 1, classes) }}
+	      {% endif %}
+	      </li>
+      {% endfor %}
+      
+      
+    </ul>
+    <!--
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>-->
+  </div>
+</nav>

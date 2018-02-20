@@ -1,0 +1,5 @@
+name: tc_homepage
+description: tc_homepage
+core: 8.x
+package: NSI
+type: module

@@ -1,0 +1,158 @@
+.container {
+    margin-right: unset;
+    margin-left: unset;
+}
+
+@media (min-width: 1200px) {
+	.container {
+    	max-width: none;
+	}
+} 
+
+@media (min-width: 992px) {
+	.container {
+	    max-width: 100%;
+	}
+}
+
+.menu--main {
+  overflow: hidden;
+}
+
+ul.menu.menu--main .nav {
+    padding-left: 10px;
+}
+
+.menu--main {
+    position: relative;
+    top: 10px;
+}
+
+.menu-item-list {
+	list-style: none;
+    font-weight: 600;
+    margin-right: 5px;
+    margin-top: 25px;
+    float: left;
+	padding: 0px 5px;
+	font-size: 14px;
+	
+	a:hover {
+		background-color: #ddd;
+		color: black;
+	}
+	a {
+		color:#000;
+	}
+	
+	a.is-active {
+		background-color: #000;
+		color: #fff!important;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}
+
+
+.menu-item-list-account a {
+	color:#000;
+}
+
+.menu-item-list-account {
+    font-size: 12px;
+    font-weight: 600;
+    margin-right: 48px;
+    margin-top: 7px;
+}
+
+
+ul.menu.menu--account.nav {
+    ul.menu.menu--account.nav {
+    /* float: right; */
+    position: absolute;
+    top: 60px;
+    right: 10px;
+}
+}
+.icon {
+	font-size: 26px!important;
+}
+
+.menu--main.responsive a.icon {
+    top: 3px;
+}
+
+@media (max-width: 999px) {
+
+	.region-navigation #block-navigationduhaut-2 {
+		/* on cache */
+		display: none;
+		
+	}
+	
+	.region-navigation-mobile #block-navigationduhaut {
+		display: block;
+	}
+	
+	.region-navigation-mobile .menu-item-list a:not(.icon) {
+		display: none;
+	}
+	.region-navigation-mobile .menu-item-list .icon {
+		float: none;
+		display: block;
+		position: relative;
+		top: -10px;
+	}
+	
+	.menu--main.responsive {
+		position: relative;
+		top:24px;
+		width: 200px;
+	    background-color: #000;
+	    z-index: 999;
+	}
+	/*
+  	.responsive.menu-item-list .icon {
+  		position: relative;
+		top: 10px;
+		
+	}*/
+	.menu--main.responsive .menu-item-list {
+		float: none;
+		margin-top: 0px; 
+		margin-bottom: 5px;
+	}
+	
+	.menu--main.responsive .menu-item-list a {
+		float: none;
+		display: block!important;
+		text-align: left;
+		z-index: 999;
+		position: relative;
+		background-color: #000;
+    	color: #fff;
+	}
+  
+}
+
+@media (min-width: 1000px) {
+	.menu-item-list a{
+		display: block;
+	}
+	.menu-item-list .icon {
+		float: right;
+		display: none;
+	}
+	
+	.region-navigation #block-navigationduhaut-2 {
+		display: block;
+	}
+	
+	.region-navigation-mobile #block-navigationduhaut {
+		/* on cache */
+		display: none;
+	}
+	
+}
+
+
