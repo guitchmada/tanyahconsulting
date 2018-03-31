@@ -189,4 +189,4 @@ AddEncoding gzip svgz
 </IfModule>
 
 redirect 301 /site-web-sous-drupal http://www.tanyah-consulting.com/drupal-madagascar
-redirect 301 /http://www.tanyah-consulting.mg/featuresbox/hebergement-internet/ http://www.tanyah-consulting.mg/madagascar-hebergement-internet
+redirect 301 http://www.tanyah-consulting.mg/featuresbox/hebergement-internet/ http://www.tanyah-consulting.mg/madagascar-hebergement-internet
