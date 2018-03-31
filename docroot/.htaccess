@@ -187,3 +187,5 @@ AddEncoding gzip svgz
   # Disable Proxy header, since it's an attack vector.
   RequestHeader unset Proxy
 </IfModule>
+
+redirect 301 /site-web-sous-drupal http://www.tanyah-consulting.com/drupal-madagascar
