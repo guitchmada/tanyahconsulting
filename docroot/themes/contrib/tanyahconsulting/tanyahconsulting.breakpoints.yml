@@ -34,15 +34,4 @@ tanyahconsulting.screen-lg-min:
   weight: 1
   multipliers:
     - 1x
-tanyahconsulting.screen-lg-max:
-  label: screen-lg-max
-  mediaQuery: 'all and (max-width: 1399px)'
-  weight: 1
-  multipliers:
-    - 1x
-tanyahconsulting.screen-superwide-min:
-  label: screen-superwide
-  mediaQuery: 'all and (min-width: 1400px)'
-  weight: 1
-  multipliers:
-    - 1x
+
